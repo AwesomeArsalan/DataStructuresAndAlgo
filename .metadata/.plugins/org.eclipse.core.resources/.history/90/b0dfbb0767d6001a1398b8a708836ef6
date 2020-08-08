@@ -1,0 +1,38 @@
+package tree;
+
+public class Tree {
+	Node root;
+	
+	void insertNode (int data) 
+	{
+		Node newNode = new Node();
+		newNode.data = data;
+		if(root == null)
+		{
+			root = newNode;
+		}
+		else
+		{
+			Node next = root;
+			if(data > next.data)
+			{
+				next.right = newNode;
+			}
+			else
+			{
+				next.left = newNode;
+			}
+			while(next.left != null && next.right != null)
+			{
+				if(data > next.data)
+				{
+					
+				}
+				else
+				{
+					
+				}
+			}
+		}
+	}
+}
