@@ -1,7 +1,7 @@
 package datastructures.tree;
 
 public class Main {
-	public static void main(String args[]) 
+	public static void main(String[] args)
     { 
 		Tree tree = new Tree();
         System.out.println("Binary Tree Example");

@@ -13,11 +13,7 @@ public class MaxOfArray {
 			return arr[idx];
 		}
 		int res = maxOfArray(arr, idx + 1);
-		if (arr[idx] > res) {
-			return arr[idx];
-		} else {
-			return res;
-		}
+    return Math.max(arr[idx], res);
 	}
 
 }

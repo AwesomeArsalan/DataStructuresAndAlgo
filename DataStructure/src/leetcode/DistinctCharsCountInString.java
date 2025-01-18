@@ -15,7 +15,7 @@ public class DistinctCharsCountInString {
 	}
 
 	public static Map<Character, Integer> distinctCharsCountInString(String input) {
-		if (null == input || "".equals(input)) {
+		if (null == input || input.isEmpty()) {
 			return Collections.emptyMap();
 		}
 		Map<Character, Integer> res = new HashMap<>();

@@ -10,7 +10,7 @@ public class NQueens {
 	}
 
 	public static List<List<String>> solveNQueens(int n) {
-		char board[][] = new char[n][n];
+		char[][] board = new char[n][n];
 		List<List<String>> listOfStringList = new ArrayList<>();
 		for (int i = 0; i < board.length; i++) {
 			for (int j = 0; j < board.length; j++) {
@@ -18,11 +18,11 @@ public class NQueens {
 			}
 		}
 		solveNQueensRecursively(board, 0, listOfStringList);
-		System.out.println(listOfStringList.toString());
+		System.out.println(listOfStringList);
 		return listOfStringList;
 	}
 
-	public static void solveNQueensRecursively(char board[][], int row, List<List<String>> listOfStringList) {
+	public static void solveNQueensRecursively(char[][] board, int row, List<List<String>> listOfStringList) {
 		if (row == board.length) {
 			addToListOfListOfString(board, listOfStringList);
 			return;
@@ -37,7 +37,7 @@ public class NQueens {
 		}
 	}
 
-	public static boolean isPlacmentSafe(char board[][], int row, int col) {
+	public static boolean isPlacmentSafe(char[][] board, int row, int col) {
 		// check for vertical attack
 		for (int i = row - 1; i >= 0; i--) {
 			if (board[i][col] == 'Q') {
@@ -59,7 +59,7 @@ public class NQueens {
 		return true;
 	}
 
-	public static void addToListOfListOfString(char board[][], List<List<String>> listOfStringList) {
+	public static void addToListOfListOfString(char[][] board, List<List<String>> listOfStringList) {
 		List<String> stringList = new ArrayList<>();
 		for (char[] arr : board) {
 			String solution = String.valueOf(arr);

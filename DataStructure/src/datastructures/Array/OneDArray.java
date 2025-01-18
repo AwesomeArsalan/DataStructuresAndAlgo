@@ -1,5 +1,7 @@
 package datastructures.Array;
 
+import java.util.Arrays;
+
 public class OneDArray {
 
 	public static void main(String[] args) {
@@ -11,20 +13,20 @@ public class OneDArray {
 		// datastructures.Array Initialization
 		arr = new int[size];
 		arr[0] = 9;
-		System.out.println(arr.length + ", " + arr);
+		System.out.println(arr.length + ", " + Arrays.toString(arr));
 		arr = new int[size + 5];
 		arr[1] = 1;
-		System.out.println(arr.length + ", " + arr);
+		System.out.println(arr.length + ", " + Arrays.toString(arr));
 
 		System.out.println(arr[0] + " " + arr[1]);
 		// declaration, instantiation and initialization
-		int arr3[] = { 33, 3, 4, 5 };
+		int[] arr3 = { 33, 3, 4, 5 };
 
 		// printing array
-		for (int i = 0; i < arr3.length; i++)// length is the property of array
-		{
-			System.out.print(arr3[i] + ", ");
-		}
+    // length is the property of array
+    for (int j : arr3) {
+      System.out.print(j + ", ");
+    }
 		System.out.println();
 		for (int item : arr3) {
 			System.out.print(item + ", ");
@@ -33,7 +35,7 @@ public class OneDArray {
 		min(arr3);
 	}
 
-	static void min(int arr[]) {
+	static void min(int[] arr) {
 		int min = arr[0];
 		for (int i = 1; i < arr.length; i++) {
 			if (min > arr[i]) {

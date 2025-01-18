@@ -10,9 +10,9 @@ public class CopyAndClonning {
 
 		// printing the array
 		System.out.println("Printing 1st array:");
-		for (int i = 0; i < arr1.length; i++) {
-			System.out.println(arr1[i]);
-		}
+    for (int j : arr1) {
+      System.out.println(j);
+    }
 
 		// copying array arr1 to arr2 with newlength as 5
 		int[] arr2 = Arrays.copyOf(arr1, 5);
@@ -21,9 +21,9 @@ public class CopyAndClonning {
 
 		// printing the array arr2
 		System.out.println("Printing new array:");
-		for (int i = 0; i < arr2.length; i++) {
-			System.out.println(arr2[i]);
-		}
+    for (int j : arr2) {
+      System.out.println(j);
+    }
 
 		// declaring a source array
 		char[] copyFrom = { 'd', 'e', 'c', 'a', 'f', 'f', 'e', 'i', 'n', 'a', 't', 'e', 'd' };
@@ -55,7 +55,7 @@ public class CopyAndClonning {
 			System.out.print(i + ",");
 		System.out.println();
 		System.out.println("Printing clone of the array:");
-		int carr[] = arr.clone();
+		int[] carr = arr.clone();
 		for (int i : carr)
 			System.out.print(i + ",");
 

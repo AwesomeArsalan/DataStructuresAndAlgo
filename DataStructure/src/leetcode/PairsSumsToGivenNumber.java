@@ -15,12 +15,12 @@ public class PairsSumsToGivenNumber {
 			return;
 		}
 		List<Integer> integerList = Arrays.asList(arr);
-		for (int i = 0; i < arr.length; i++) {
-			Integer rem = input-arr[i];
-			if(integerList.contains(rem)) {
-				System.out.println(arr[i] + " " + integerList.get(integerList.indexOf(rem)));
-			}
-		}
+    for (Integer integer : arr) {
+      Integer rem = input - integer;
+      if (integerList.contains(rem)) {
+        System.out.println(integer + " " + integerList.get(integerList.indexOf(rem)));
+      }
+    }
 
 	}
 

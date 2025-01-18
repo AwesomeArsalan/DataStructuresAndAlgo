@@ -4,9 +4,9 @@ public class BubbleSort {
 	public static void main(String[] args) {
 		int[] arr = new int[] { 2, 8, 5, 3, 9, 2, 1 };
 		bubbleSort(arr);
-		for (int i = 0; i < arr.length; i++) {
-			System.out.print(arr[i] + " ");
-		}
+    for (int j : arr) {
+      System.out.print(j + " ");
+    }
 	}
 
 	private static void bubbleSort(int[] arr) {

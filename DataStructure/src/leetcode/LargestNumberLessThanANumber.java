@@ -27,7 +27,7 @@ public class LargestNumberLessThanANumber {
     }
 
     public static boolean containsDigit(Integer input, Integer digit) {
-        int extractedDigit = 0;
+        int extractedDigit;
         while (input != 0) {
             extractedDigit = input % 10;
             if (extractedDigit == digit) {
